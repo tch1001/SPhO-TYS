@@ -1,0 +1,410 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{yhmath}
+\usepackage{fancyhdr}
+
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyhead[C]{\textbf{SPhO 2016}}
+
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{\texttt{victoris.org}}
+
+
+\title{SPhO Ten Year Series (TYS) with Solutions: 2016 Solutions}
+\author{
+    Solutions available on Victoris\\
+    \texttt{victoris.org}
+    \and 
+    Solutions By Anonymous
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{2016}
+
+\subsection{Question 1}
+1. Hohmann transfer orbit and gravity assist
+
+(a) A spacecraft is to be sent from Earth to Saturn. The Hohmann transfer is a manoeuvre that transfers the
+spacecraft from Earth’s orbit around the Sun (assumed to be circular) to Saturn’s orbit around the Sun (assumed
+to be circular also). This is done by pushing the spacescraft into an elliptical orbit that has its perihelion and
+aphelion touching Earth’s orbit and Saturn’s orbit, respectively.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2016q1.png}
+	\caption{Hohmann transfer orbit from Earth to Saturn. $v_s$, is the velocity of the spacecraft.}
+\end{figure}
+
+(i) Assuming that the spacecraft is initially travelling at the velocity of Earth around the Sun, calculate the change in velocity $\Delta v$ for the spacescraft to transfer from Earth's orbit to the elliptical orbit. Ignore the Earth's and Saturn's gravitational forces on the spacecraft. Use the constants below (and their corresponding symbols) in your working. [4 marks] \\
+Earth's velocity around Sun: $v_{\oplus}=2.97 \times 10^{4} \mathrm{~m} / \mathrm{s}$ \\
+Earth's orbital radius $r_{\oplus}=1.50 \times 10^{11} \mathrm{~m}$ \\
+Saturn's orbital radius $r_{h}=1.43 \times 10^{12} \mathrm{~m}$ \\
+Mass of Sun $M_{\odot}=1.99 \times 10^{30} \mathrm{~kg}$ \\
+Gravitational constant $G=6.67 \times 10^{-11} \mathrm{Nm}^{2} / \mathrm{kg}^{2}$ \\
+(ii) Calculate the time it takes for the spacecraft to travel from Earth's orbit to Saturn's orbit. [2 marks] \\
+(b) The Cassini spacecraft was not sent to Saturn by a direct Hohmann transfer. Instead, it was first sent to Venus (via Hohmann transfer), where it gained speed, twice, using gravity assists by Venus. The first gravity assist by Venus changed the spacecraft's velocity and transferred the spacecraft to a more eccentric orbit, such that the spacecraft returned to its orbital perihelion after Venus had completed its orbit twice, and the spacecraft received the second gravity assist by Venus at that point. Calculate the change in velocity of the spacecraft during the first Venus' gravity assist. [6 marks]\\
+Venus' orbital radius $r_{v}=1.08 \times 10^{11} \mathrm{~m}$ \\
+Venus' orbital period $T_{v}=0.615$ years \\
+
+\subsection{Solution 1}
+\subsubsection{Part 1ai}
+Let $v_s$ be the boosted velocity of the spacecraft, and $v'_s$ be the velocity of the spacecraft when it enters Saturn's orbit. Conservation of angular momentum yields $v_s r_\oplus = v'_s r_h$.
+
+Conservation of energy yields
+\begin{align}
+\frac{1}{2} m v_s^2 - \frac{GM_\oplus m}{r_\oplus} &= \frac{1}{2} m {v'}_s^{2}-\frac{GM_\oplus m}{r_h} \\
+v_s^2-{v'}_s^{2} &= \frac{2GM_\oplus}{r_\oplus}\left(1-\frac{r_\oplus}{r_h}\right)
+\end{align}
+
+Combining these equations, we get 
+\begin{align}
+v_s^2 &= \frac{2GM_\oplus r_h}{r_\oplus(r_\oplus + r_h)} \\
+\Delta v &= v_s - v_\oplus \\
+&= \sqrt{\frac{2GM_\oplus r_h}{r_\oplus(r_\oplus + r_h)}} - v_\oplus \\
+&= 1.03 \times 10^4 \mathrm{m/s}
+\end{align}
+
+\subsubsection{Part 1aii}
+\begin{align}
+T &= 2\pi \sqrt{\frac{a^3}{GM_\oplus}} \\
+&= \pi \sqrt{\frac{(r_\oplus + r_h)^3}{2GM_\oplus}} \\
+t &= T/2 = 5.83 \mathrm{years}
+\end{align}
+
+\subsubsection{Part 1b}
+Consider the first gravitational assist at Venus. Suppose the spacecraft is transferred to a new orbit with semi-major axis $a$ and period $T$. Let the period of Venus' orbit be $T_v$.
+
+\begin{align}
+T &= 2T_v \\
+2\pi \sqrt{\frac{a^3}{GM_\oplus}} &= 2T_v \\
+a &= \sqrt[3]{\frac{T^2 GM_\oplus}{\pi^2}} \\
+a &= 1.72\times10^{11} \mathrm{m}
+\end{align}
+
+Suppose the Hohmann transfer from Earth to Venus results in the spacecraft travelling at velocity ${v'}_s$ right before the first gravity assist. 
+
+\[{v'}_s = \sqrt{\frac{2GM_\oplus r_\oplus}{r_v(r_v+r\oplus)}}\]
+
+After the first gravity assist, suppose the spacecraft now travels with velocity $v_g$. Suppose the spacecraft has velocity $v'_g$ at the aphelion of this new orbit. Conservation of angular momentum yields
+\[v_g r_v = v'_g(2a - r_v) \]
+
+Conservation of energy gives
+
+\begin{align}
+\frac{1}{2} m v_g^2 - \frac{GM_\oplus m}{r_v} &= \frac{1}{2}m{v'}_g^2- \frac{GM_\oplus m}{2a-r_v} \\
+v_g^2 &= \frac{2GM_\oplus (2a - r_v) }{2ar_v} \\
+\Delta v &= v_g - v'_s \\
+&= \sqrt{\frac{GM_\oplus}{r_v}}\left( \sqrt{2-\frac{r_v}{a}} - \sqrt{\frac{2r_v}{r_\oplus + r_\oplus}}\right) \\
+&= 3.26 \times 10^3 \mathrm{m/s}
+\end{align}
+
+\pagebreak
+\subsection{Question 2}
+2. Consider a rigid axially symmetric wheel with mass $M$, moment of inertia $I$ about the axis of symmetry $S$, and radius $R$, moving in an upright position on a horizontal plane. The coefficient of kinetic friction between the wheel and the plane is $\mu_{k}$ \\
+(a) The wheel is initially spun about $S$ with constant angular speed $\omega_{0}$, and is then released. It slips for a time $T_{a}$ and then rolls without slipping. Determine $T_{a}$ and the centre-of-mass speed $v_{a}$ of the rolling wheel. [4 marks] \\ 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2016q2.png}
+	\caption{Rolling wheel with initial angular speed $\omega_0$.}
+\end{figure}
+
+(b) The wheel has an initial horizontal centre-of-mass speed $v_{0}$ in addition to an initial angular speed $\omega_{0}$. Determine the time $T_{b}$ at which the wheel rolls without slipping and the centre of mass speed $v_{b}$ of the rolling wheel. [4 marks] 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2016q2_2.png}
+	\caption{Rolling wheel with initial angular speed $\omega_{0}$ and initial horizontal centre-of-mass speed $v_{0}$.}
+\end{figure}
+
+(c) The wheel has an initial horizontal centre of mass speed $v_{0}$ and an initial backspin $-\omega_{0}$. Determine the possible motions of the wheel. [4 marks]
+\begin{figure}
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2016q2_3.png}
+	\caption{Rolling wheel with initial backspin of angular speed $\omega_{0}$ and initial horizontal centre-of-mass speed $v_{0}$.}
+\end{figure}
+
+\pagebreak
+
+\subsection{Solution 2}
+\subsubsection{Part 2a}
+The frictional force $f$ between the wheel and plane satisfies
+\[f = \mu_k mg = ma \Rightarrow a = \mu_k g\]
+
+Consider the torque about the centre of mass of the wheel
+\[-fR = I\alpha \Rightarrow \alpha = -\frac{\mu_k mgR}{I}\]
+
+The velocity and the angular velocity of the wheel satisfy
+\begin{align}
+v &= v_0 + at = \mu_k gt \\
+\alpha &= \omega_0 + \alpha t = \omega_0 - \frac{\mu_k mgR}{I} t \\
+\end{align}
+
+When the wheel rolls without slipping, 
+\begin{align}
+v &= \omega R \\
+\mu_k gt &= R\left(\omega_0 - \frac{\mu_k mgR}{I} t \right) \\
+T_a &= \frac{\omega_0 R}{\mu_k g \left(1+\frac{mR^2}{I}\right)} \\
+v_a &= \mu_kgT_a = \frac{\omega_0R}{\left(1+\frac{mR^2}{I}\right)}
+\end{align}
+
+\subsubsection{Part 2b}
+Suppose $v_0$ is directed to the right.
+
+Case 1: $v_0 < \omega_0 R$. Then $f$ is directed to the right. 
+\begin{align}
+v &= v_0 + \mu_kg t \\
+\omega &= \omega_0 - \frac{\mu_k mgR}{I} t
+\end{align}
+
+Solving for $v=\omega R$, we get
+\[t = \frac{\omega_0 R - v_0}{\mu_k g \left(1+\frac{mR^2}{I}\right)}\]
+
+Case 2: $v_0 \geq \omega_0 R$. Then $f$ is directed to the left.
+\begin{align}
+v &= v_0 - \mu_kg t \\
+\omega &= \omega_0 + \frac{\mu_k mgR}{I} t
+\end{align}
+
+Solving for $v=\omega R$, we get
+\[t = \frac{v_0 - \omega_0 R}{\mu_k g \left(1+\frac{mR^2}{I}\right)}\]
+
+In any case, 
+\[T_b = \frac{|v_0 - \omega_0 R|}{\mu_k g \left(1+\frac{mR^2}{I}\right)}\]
+\[v_b = \frac{mv_0R^2+I\omega_0R}{I+MR^2}\]
+
+\subsubsection{Part 2c}
+If $\omega_0 \gg v_0/R $, the wheel will move to the left. If $\omega_0 \ll v_0/R$, the wheel will move to the right. For a specific ratio of $\omega_0$ and $v_0$, the wheel will eventually come to rest. 
+
+This \href{https://mitocw.ups.edu.ec/courses/physics/8-012-physics-i-classical-mechanics-fall-2008/related-resources/2007_quiz2_sol.pdf}{link} provides a more complete description.
+
+\pagebreak
+
+\subsection{Question 3}
+3. A circular coil with radius $a$ is connected with an equilateral triangle on the inside as shown in the figure below. The resistance for each section of the wire is labeled. A uniform magnetic field $B(t)$ is pointing into the paper, perpendicular to the plane of the coil. $B(t)$ is decreasing over time at a constant rate $k .$ Given $2 r_{1}=3 r_{2} .$ Find $U_{A B}$, the potential difference between points $\mathrm{A}$ and $\mathrm{B}$. [10 marks]
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2016q3.png}
+	\caption{Circular coil with 3 wires forming an equilateral triangle inside the circle.}
+\end{figure}
+
+\subsection{Solution 3}
+The changing magnetic flux induces an emf through the loop. $\mathcal{E_i} = kA_i$, where $\mathcal{E_i}$ is the clockwise emf of loop $i$ and $A_i$ is the area of loop $i$.
+
+Let $i_1, i_2, i_3, i_4, i_5, i_6$ be the currents through $\wideparen{AC}, CA, AB, \wideparen{BA}, BC, \wideparen{CB}$ respectively. Consider the loops AC, ABC, AB, BC (clockwise) and junctions A, B and C. Kirchhoff's laws yield
+
+\begin{align}
+\mathcal{E}_1 + i_1r_1+i_2r_2 &= 0 \\
+\mathcal{E}_2 - i_2r_2 - i_3r_2 - i_5(2r_2)& = 0 \\
+\mathcal{E}_3 +i_3r_3+i_4r_1 &= 0\\
+\mathcal{E}_4 + i_5(2r_2)+i_6r_1 &= 0 \\
+i_2+i_4 &= i_1+i_3 \\
+i_3 + i_6 &= i_4+i_5 \\
+i_5 + i_1 &= i_2 + i_6
+\end{align}
+
+By symmetry, $i_1=i_4, i_2 = i_3$. Solving, we get
+\[i_2 = \frac{7}{16} \frac{\mathcal{E}_2}{r_1}\]
+
+By geometry, \[ \mathcal{E}_2 = kA_2 = \frac{3\sqrt{3}}{4} ka^2\]
+
+The potential difference $A\rightarrow B$ is \[U_{AB} = i_3r_2 = i_2r_2 = \frac{7\sqrt{3}}{32} ka^2\]
+\pagebreak
+
+\subsection{Question 4}
+4. An experiment was performed to determine the value of the gravitational acceleration $g$ on Earth. Two equal masses of mass $M$ hang at rest from the ends of a string on each side of a light pulley (see figure below). A mass $m=0.01 M$ is placed on the right-hand-side mass. After the heavier side has moved down from rest by $h=1 \mathrm{~m}$ the small mass $m$ is removed. The system continues to move for the next $1 \mathrm{~s}$, covering a distance of $H=0.312 \mathrm{~m} .$ Find the value of $g$. [10 marks]
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2016q4.png}
+	\caption{Pulley with a system of masses attached.}
+\end{figure}
+
+\subsection{Solution 4}
+Conservation of energy:
+\begin{align}
+    \frac{1}{2}(M+(M+m))v^2+Mgh-(M+m)gh &= 0 \\
+    2mgh &= (2M+m)v^2 
+\end{align}
+
+After $m$ is removed, $v$ is constant as there is no net force. So $H=vt\Rightarrow v^2=\left(\frac{H}{t}\right)^2$.
+
+\begin{align}
+    \left(\frac{H}{t}\right)^2 &= \frac{2mgh}{(2M+m)} \\
+    g &= \frac{(H/t)^2(2+m/M)}{2(m/M)h} \\
+     &= 9.78 \mathrm{m/s^2}
+\end{align}
+
+\subsection{Question 5}
+5. Consider the following decay
+$$
+{ }^{228} \mathrm{Th} \rightarrow{ }^{224} \mathrm{Ra}+\alpha
+$$
+The available energy $Q$ is given by
+$$
+Q=\left(m_{\mathrm{Th}}-m_{\mathrm{Ra}}-m_{\alpha}\right) c^{2}
+$$
+where $m_{\mathrm{Th}}, m_{\mathrm{Ra}}$, and $m_{\alpha}$ are the masses of Th-228, Ra-224 and the alpha particle respectively. \\
+(a) Calculate the percentage of $Q$ carried by the alpha particle. [6 marks] \\
+(b) In the above decay, the highest energy $\alpha$ particle has energy $5.423 \mathrm{~MeV}$ and the next highest energy is $5.341$ $\mathrm{MeV}$. Find the energy of the first excited state of Ra-224. [3 marks]
+
+\subsection{Solution 5}
+
+\subsubsection{Part 5a}
+Suppose after the decay the Ra-224 and alpha particle have velocities $v_{Ra}$ and $v_\alpha$ (in opposing directions) respectively. Conservation of energy and momentum:
+\begin{align}
+    \frac{1}{2}m_{Ra}v_{Ra}^2 + \frac{1}{2}m_\alpha v_\alpha^2 &= 0\\
+    m_\alpha v_\alpha - m_{Ra} v_{Ra} &= 0 \\
+    Q &= \frac{1}{2}m_\alpha v_\alpha^2(1+m_\alpha / m_{Ra} ) \\
+    \frac{E_\alpha}{Q} &= \frac{1}{1+m_\alpha / m_{Ra} } = 98.2 \%
+\end{align}
+
+Note: relativistic effects can be neglected.
+
+\subsubsection{Part 5b}
+The energy of the first excited state of Ra-224 is
+\begin{align}
+    E_1 &= \Delta E \\
+    &= 5.423 - 5.341 \\
+    &= 0.082 \mathrm{MeV}
+\end{align}
+
+\subsection{Question 6}
+6. We know that a rainbow can be formed by a ray entering a water droplet and exiting it after suffering a total internal reflection. We can call this a 'first-order' rainbow. The question is regarding the possibility of a 'zeroth' order rainbow where parallel rays impinging on a spherical raindrop is refracted into the drop and then out again into the air directly (without total internal reflection). \\
+(a) Sketch a diagram depicting such a situation in a raindrop. Find the angle of deviation in terms of the angle of incidence $\theta_{i}$ and angle of refraction $\theta_{r}$. [2 marks] \\
+(b) Show that the 'zeroth' order rainbow, given the above conditions, cannot exist. [3 marks] \\
+In the following part of the question, we ask if a rainbow (or 'bubblebow') is able to be formed from the scattering of light in air bubbles in water. Again, we can consider parallel rays (i) entering the bubble and exiting without total internal reflection and (ii) entering and exiting with one (assumed) internal reflection at the gas-liquid interface. [3 marks] \\
+(c) Sketch a diagram/s depicting the two situations in the bubble. Find the angle of deviation in each case. [3 marks]\\
+(d) Work out if a rainbow (or 'bubblebow') can exist in each case. [4 marks] 
+
+\subsection{Solution 6}
+\subsubsection{Part 6a}
+By geometry, the angle of deviation $\delta=2(\theta_i - \theta_r)$.
+\subsubsection{Part 6b}
+The intensity of the scattered light is maximal when $\frac{d\delta}{d\theta_i}$ vanishes. This should have some dependence on $n$, which causes the different wavelengths of light to be scattered differently, producing a rainbow. 
+
+In this case, 
+\begin{align}
+    \frac{d\delta}{d\theta_i} &= 2\left(1-\frac{d\theta_r}{d\theta_i}\right) \\
+    \sin\theta_i &= n\sin\theta_r \\
+    \cos\theta_i \dd{\theta_i} &= n\cos\theta_r \dd{\theta_r} \\
+    \frac{d\theta_r}{d\theta_i} &= \frac{1}{n} \frac{\cos\theta_i}{\cos\theta_r} = \sqrt{\frac{1-\sin^2\theta_i}{n^2-\sin^2\theta_i}} \\
+    0 &= 2\left(1-\frac{\cos\theta_i}{\sqrt {n^2-\sin^2\theta_i}} \right) \\
+    n^2 &= 1
+\end{align}
+which is impossible.
+
+\subsubsection{Part 6c}
+Case (i): $\delta = 2(\theta_r - \theta_i)$. Case (ii): $\delta = 2\pi - 2\theta_i - 4\theta_r$.
+
+\subsubsection{Part 6d}
+Case (i) produces no rainbow by similar reasoning as part 6b. 
+
+Case (ii):
+\begin{align}
+    \frac{d\delta}{d\theta_i} &= 2-4\frac{d\theta_r}{d\theta_i} \\
+    &= 2-\frac{4n\cos\theta_i}{\sqrt{1-n^2\sin^2\theta_i}} \\
+    &= 0 \\
+    1-n^2\sin^2\theta_i &= 4n^2\cos^2\theta_i \\
+    \sin\theta_i& = \sqrt{\frac{4}{3} - \frac{1}{n^2}} \\
+\end{align}
+
+For $n>1$ we get $\sin\theta>1$, which is impossible. Hence there is no rainbow in either case.
+
+\subsection{Question 7}
+7. Two infinitely long concentric hollow cylinders have radii $a$ and $4 a$. Both cylinders are insulators; the inner cylinder has a uniformly distributed charge per length of $+\lambda$; the outer cylinder has a uniformly distributed charge per length of $-\lambda$. \\
+The inner cylinder is rotating clockwise about its axis with an angular velocity $\omega \ll c / a$, where $c$ is the speed of light. Assume that the permeability of the dielectric cylinder and the space between the cylinders is that of free space, $\mu_{0}$. \\
+(a) Determine the electric field for all regions. [4 marks] \\
+(b) Determine the magnetic field for all regions [4 marks] \\
+(c) Determine the Poynting vector $\mathbf{S}=\frac{1}{\mu_{0}} \mathbf{E} \times \mathbf{B}$, for all regions. [2 marks]
+
+\subsection{Solution 7}
+\subsubsection{Part 7a}
+For $r<a$, $E=0$ as there is no charge enclosed.
+
+For $a < r < 4a$, Gauss' Law gives $E(2\pi rl)=\lambda l/\epsilon_0 \Rightarrow E=\frac{\lambda}{2\pi r \epsilon_0}$
+
+For $r > 4a$, $E=0$ as there is no net charge enclosed.
+
+\subsubsection{Part 7b}
+Use the same technique for deriving the magnetic field in a solenoid. For $r<a$, 
+\begin{align}
+    Bl &= \mu_0 I = \mu_0 \frac{Q}{t} = \frac{\lambda l(2\pi a)}{2\pi/\omega} = \mu_0 \lambda l a \omega \\
+    B &= \mu_0 \lambda a \omega
+\end{align}
+
+For $r > a$, $B=0$.
+
+\subsubsection{Part 7c}
+Since there is no region where $E$ and $B$ are both nonzero, $S$ is zero everywhere.
+\subsection{Question 8}
+8. Consider a spaceship initially at rest in the lab frame. At a given instant, it starts to accelerate with constant proper acceleration $a$. Assume that the lab clock $(t)$ and spaceship clock $\left(t'\right)$ are synchronized such that this happens when $t=t'=0$. [Note: Proper acceleration is defined such that: at t'+dt', the spaceship is moving at speed a dt' relative to the frame it was in at time t'.] \\
+(a) Determine the relative speed of the spaceship and the lab frame in terms of $t'$. Also, check the limit of the relative speed found when $a t' \ll c$ and comment. [5 marks] \\
+(b) Find the relation between $t$ and $t'$ at later stage. Also, explore the relation for condition $a t' \gg c$. Comment. [5 marks] \\
+
+\subsection{Solution 8}
+\subsubsection{Part 8a}
+Let $v$ be the instantaneous speed of the spaceship relative to the lab frame. Consider a frame $S'$ moving with velocity $v'$ relative to the spaceship frame (S), which represents the spaceship frame after experiencing acceleration for $\dd{t'}$. The velocity addition formula gives
+
+\begin{align}
+    v+\dd{v} &= \frac{v'+v}{1+vv'/c^2} \\
+    \dd{v} &= \dd{v'}\frac{1+\frac{vv'}{c^2}-\frac{v}{c^2}(v'+v)}{\left(1+\frac{vv'}{c^2}\right)^2} \\
+    &= dv' \gamma_v^{-2} \left(1+\frac{vv'}{c^2}\right)^{-2} \\
+    \frac{dv'}{dt'} &= a \\
+    \dd{v} &= a \dd{t'} \gamma_v^{-2} \left(1+\frac{vv'}{c^2}\right)^{-2}
+\end{align}
+
+In the limit $\dd{t'}, v'=0$, so
+
+\begin{align}
+    \dd{v} &= \frac{a}{\gamma_v^2} \dd{t'} \\
+    \frac{1}{1-v^2/c^2} \dd{v} &= a \dd{t'} \\
+    \int_0^v \frac{\dd{v}}{1-v^2/c^2} &= \int_0^{t'} a\dd{t'} \\
+    \frac{c}{2} \ln\left(\frac{1+v/c}{1-v/c}\right) &= at' \\
+    v &= \frac{\exp(2at'/c)-1}{\exp(2at'/c)+1} \\
+    &= c \tanh(at'/c) 
+\end{align}
+
+In the limit $at' \ll c$, $v\rightarrow at'$, which corresponds to the classical limit.
+
+\subsubsection{Part 8b}
+\begin{align}
+    \dd{t} &= \gamma_v \dd{t'} \\
+    \gamma_v &= \frac{1}{\sqrt{1-v^2/c^2}} = \cosh(at'/c) \\
+    \int_0^t \dd{t} &= \int_0 ^ {t'} \cosh(at'/c) \dd{t'} \\
+    t&=\frac{c}{a} \sinh(at'/c)
+\end{align}
+
+In the limit $at' \gg c$, $t \rightarrow \frac{c}{2a}\exp(at'/c)$. Time inside the spaceship will seem to run exponentially slower. 
+
+\subsection{Question 9}
+9. An electron bubble in liquid helium (adapted from APhO 2010 Taipei) \\
+When an electron is planted inside liquid helium, it can repel the atoms around it isotropically, thus forming a spherical surface, inside which contains nothing but the electron itself. This is known as an electron bubble. \\
+\\
+The components of an electron's position vector $\vec{q}=(x, y, z)$ and momentum vector $\vec{p}=\left(p_{x}, p_{y}, p_{z}\right)$ must obey Heisenberg's uncertainty relations $\Delta q_{i} \Delta p_{i} \geq h / 4 \pi$, where $h$ is the Planck constant. \\
+Note that the uncertainty of a variable $f$, denoted by $\Delta f$ is given by
+$$
+\Delta f=\sqrt{\overline{f^{2}}-\bar{f}^{2}}
+$$
+where the overhead bar denotes the average (mean) of the quantity under it. \\
+Consider an electron bubble in liquid helium with an equilibrium radius $R$. The electron of mass $m$ moves freely inside the bubble with kinetic energy $E_{K}$ and exerts a pressure $P_{e}$ on the inner side of the bubble-liquid interface. The pressure exerted by liquid helium on the outer side of the interface is $P_{\text {He }}$. The liquid is kept at a constant temperature close to $0 \mathrm{~K}$ and the surface tension $\sigma$ is given by $3.75 \times 10^{-4} \mathrm{Nm}^{-1}$.  \\
+(a) Find a relation between $P_{\mathrm{He}}, P_{e}$ and $\sigma$. [2 marks] \\
+(b) Find a relation between $E_{K}$ and $P_{e}$. [4 marks] \\
+(c) Let $E_{0}$ be the smallest possible value of $E_{K}$ consistent with Heisenberg's uncertainty relations when the electron is inside the bubble of radius $R$. Estimate $E_{0}$ as a function of $R$. [4 marks] \\
+(d) Let $R_{e}$ be the equilibrium radius of the bubble when $E_{K}=E_{0}$ and $P_{\mathrm{He}}=0 .$ Obtain an expression for $R_{e}$ and calculate its value. [2 marks]
+
+\subsection{Solution 9}
+Please refer to this link: \textbf{\href{http://asianphysicsolympiad.org/download/past_APhO_roblems/2010_APhO/2010_APhO_Theoretical_Question_3_Solution.pdf}{solution}}.
+\end{document}
+

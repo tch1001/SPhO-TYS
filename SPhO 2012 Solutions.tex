@@ -1,0 +1,306 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+
+\title{SPhO Ten Year Series (TYS) with Solutions: 2012 Solutions}
+\author{
+    Solutions available on Victoris\\
+    \texttt{victoris.org}
+    \and 
+    Solutions By Yang Jingxiang
+    \texttt{jingxiangyang39710@gmail.com}
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{2012}
+
+\subsection{Question 1}
+1. A platform scale is calbrated to indicate the mass in $\mathrm{kg}$ of an object placed on it. Particles fall from a height of $3.5 \mathrm{~m}$ and collide with the balance pan of the scale. Assuming that the collisions are elastic and that the particles rebound upwards with the same speed they had before hitting the pan, determine the average scale reading if each particle has mass $110 \mathrm{~g}$ and collisions occur at the rate of $42 \mathrm{~s}^{-1}$. [8] \\
+
+$$
+\begin{aligned}
+& \langle F\rangle=\frac{\Delta P}{\Delta t}=\frac{2 m \sqrt{2 g h}}{1 / 42}=84 \times 0.11 \times \sqrt{2 \times 9.81 \times 3.5}=76.5694 \mathrm{~N} \\
+& \langle m\rangle=\frac{\langle F\rangle}{g}=\frac{78.5694}{9.81}=7.81 \mathrm{~kg} .
+\end{aligned}
+$$
+\subsection{Question 2}
+2. A collection of $N$ identical blocks, each of mass $M$, are connected by unstretchable ropes of negligible mass. The blocks are on a horizontal surface. An external force $F_{0}$ acts on Block 1, pulling it horizontally to the right with constant velocity. What is the tension in the rope connecting Block $n$ to Block $n+1$, if
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{spho_book_TYS_images/2012q1.png}
+	\caption{$N$ identical blocks}
+\end{figure}
+(i) There is no friction between the blocks and the surface? [3] \\
+(ii) The coefficient of kinetic friction between each block and the surface is $\mu_{k}$? ( $F_{0}$ large enough to accelerate the blocks despite the friction.) [5] \\
+
+i) Take all mass as a system
+$$
+a=\frac{F_0}{N M_1}
+$$
+Take block $n+1$ to block $N$ as a system
+$$
+F=a \cdot(N-n) M \Rightarrow F=\frac{N-n}{N} F_0 .
+$$
+ii)
+$$
+\begin{aligned}
+& a=\frac{F_0-N M g \mu_k}{N M} \\
+& F-(N-n) M g \mu_k=a(N-n) M \\
+& F=(N-n) M g \mu_k+(N-n) M\left(\frac{F_0}{N M}-g \mu_k\right) . \\
+&=\frac{N-n}{N} F_0 \quad \
+\end{aligned}
+$$
+
+\subsection{Question 3}
+3. A pendulum bob is constructed by taking a thin, uniform-density circular ring of mass $M$ and radius $R$ and affixing a straight, thin, uniform density rod of mass ${m}$ and length $2 R$ across its diameter as shown in the diagram. The pendulum hangs in a vertical plane from a frictionless pivot that can be attached to the ring at any point. The pivot allows the bob to swing either in the plane of the bob or in the plane perpendicular to the bob. Assume the angular amplitude is small.
+
+(i) What swinging configurations givd the maximum period? [4]
+(ii) What swinging configurations give the minimum period? [4]
+(iii) Find the ratio of the maximum period to the minimum period. [2]
+
+i) $T=2 \pi \sqrt{\frac{I}{m g d}}$.
+swing in the plane of the bob
+$$
+\begin{aligned}
+I_{\max } & =\left(M R^2+M R^2\right)+\left(\frac{1}{12} m(2 R)^2+m R^2\right) \\
+& =2 M R^2+\frac{4}{3} m R^2 . \\
+T & =2 \pi \sqrt{\frac{2 M R^2+4 / 3 m R^2}{(M+m) g R .}}
+\end{aligned}
+$$
+ii) swing in the plane perpendicular to the hob
+$$
+\begin{aligned}
+& I_{\text {min }}=\left(\frac{1}{2} M R^2+M R^2\right)+m R^2 \\
+& T=2 \pi \sqrt{\frac{\frac{3}{2} M R^2+m R^2}{(M+m) g R}} \\
+\end{aligned}
+$$
+iii)  
+$$
+\begin{aligned}
+\frac{T_{\text {max }}}{T_{\text {min }}}=\frac{2}{3} \sqrt{3}
+\end{aligned}
+$$
+\subsection{Question 4}
+4. The distance from the centre of the Earth to the poles is $21 \mathrm{~km}$ shorter than the radius of the equator. A one second pendulum is taken from the equator (at sea level) to the North Pole. Make a rough estimate of its change in period. You may assume for the purposes of your calculation that the Earth has a constant density. [6]
+
+$$
+\begin{aligned}
+& T=2 \pi \sqrt{\frac{l}{g}}=2 \pi \sqrt{\frac{l}{\frac{G M}{r^2}}}=2 \pi \sqrt{\frac{l}{G M}} r . \\
+& \frac{\Delta T}{T}=\frac{\Delta r}{r} \\
+& \Delta T=\frac{21}{6400}=0.00335 .
+\end{aligned}
+$$
+\subsection{Question 5}
+5. A square lattice of identical resistances (1 ohm along each edge) is wrapped around an infinite cylinder in such a way that $N$ resistances are placed along the cross sectional circle of the cylinder. What are the resultant resistances between two adjacent lattice points in the "axial" and in the "circumferential" directions? [12] \\
+First consider the cases $N=2, N=3$, and the limit $N \rightarrow \infty$
+
+$$
+\begin{aligned}
+& N=2 \\
+& \left(\frac{1}{R}+2\right)^{-1}+2=R \\
+& \frac{1+2 R}{R}=\frac{1}{R-2} \\
+& 2.12^2-4 R-2=0 \\
+& R=1 \pm \sqrt{2} \Rightarrow R=1+\sqrt{2} \Omega \text {. } \\
+& R_{A B}=\left(\frac{2}{1+\sqrt{2}}+2\right)^{-1}=\frac{\sqrt{2}}{4} \Omega \text {. } \\
+& N=3 \\
+& \left(\frac{1}{R}+\frac{3}{2}\right)^{-1}+2=R . \\
+& \frac{2+3 R}{2 R}=\frac{1}{R-2} . \\
+& 3 R^2-6 R-4=0 \\
+& R=1 \pm \frac{\sqrt{21}}{3} \Omega \\
+& R+B=\left(\frac{2}{1+\frac{\sqrt{21}}{3}}+\frac{3}{2}\right)^{-1}=\frac{2 \sqrt{21}}{21} \Omega \\
+&
+\end{aligned}
+$$
+$$
+\begin{aligned}
+& N \rightarrow \infty \\
+& \left(\frac{1}{R}+1\right)^{-1}+2=R \\
+& \frac{1+R}{R}=\frac{1}{R-2} \\
+& R=\frac{2 \pm \sqrt{4+8}}{2}=1 \pm \sqrt{3} \cdot \Omega \\
+& R_{A B}=\left(\frac{2}{1+\sqrt{3}}+1\right)^1 \\
+& =\frac{\sqrt{3}}{3} \Omega
+\end{aligned}
+$$
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{spho_book_TYS_images/2012_sol_Q5.jpg}
+	\caption{configurations of resistors}
+\end{figure}
+\subsection{Question 6}
+6. An infinitely long perfectly conducting straight wire of radius $r$ carries a constant current $i$ and charge density zero as seen by a fixed observer $A$. The current due to an electron stream of uniform density moving with high (relativistic) velocity $U$. A second observer travels parallel to the wire with high (relativistic) velocity $v . \mathrm{As}$ seen by the second observer, $B$, \\
+(a) What is the electrornagnetic field? [3] \\
+(b) What is the charge density in the wire implied by this field? [3] \\
+(c) With what velocities do the electron and ion streams move? [4] \\
+(d) How do you account for the presence of a charge density seen by $B$ but not by $A$? [4]\\
+
+let $F$ and $F^{\prime}$ he the reference frame of $A \& B$ respectively.
+$$
+\begin{aligned}
+& \ln F, \vec{E}=0 \text {. } \\
+& \vec{B}(R)=\left\{\begin{array}{l}
+\frac{\mu_0 i R}{2 \pi r^2} \hat{e}_{\varphi} \quad R<r . \\
+\frac{\mu_0 i}{2 \pi r} \hat{e}_{\varphi} \quad R>r
+\end{array}\right. \\
+& \ln F^{\prime}, \vec{E}_{//}^{\prime}=E_{//}=0 . \\
+& \vec{B}_{//}^{\prime}=\vec{B}_{//}=0 \\
+& \vec{E}^{\prime}=\vec{E}_{\perp}^{\prime}=\gamma\left(\Vec{E}_{\perp}+\vec{v} \times \vec{B}\right) \\
+& =-\gamma\ v B e_{\varphi} \\
+& = \begin{cases}-\frac{\mu_0 \gamma i v R}{2 \pi r^2} \hat{e}_r \quad R<r \\
+-\frac{\mu_0 \gamma i v}{2 \pi r} \hat{e}_r \quad R>r\end{cases} \\
+&
+\end{aligned}
+$$
+$$
+\begin{aligned}
+& \vec{B^{\prime}}=\vec{B}_{\perp}^{\prime}=\gamma\left(\vec{B}_{\perp}-\frac{\vec{v}_{\times} \vec{E}_{\perp}}{c^2}\right) \\
+& =\gamma \mathrm{Be} \varphi \\
+& =\left\{\begin{array}{l}
+\frac{\mu_0 \gamma i R}{2 \pi r^2} \hat{e}_{\varphi} \quad R<r \\
+\frac{\mu_0 \gamma i}{2 \pi r} \hat{e}_{\varphi} \quad R>r  .
+\end{array}\right. \\
+&
+\end{aligned}
+$$
+where. $\quad \gamma=\frac{1}{\sqrt{1-v^2 / c^2}}$.\\
+b) In $F^{\prime}$ the charge density of the wire is $p^{\prime}$\\
+By Gauss Law
+$$
+\begin{aligned}
+2 \pi R E_r^{\prime}=\frac{\rho^{\prime} \pi R^2}{\varepsilon_0} & \Rightarrow E_r^{\prime}=\frac{\rho^{\prime} R}{2 \varepsilon_0} \hat{e}_r \cdot(R<r) \\
+& \Rightarrow \rho^{\prime}=-\frac{\gamma v i}{\pi r^2 c^2} .
+\end{aligned}
+$$
+c) In $F$ velocirg of electron $\vec{v}_e=-u \hat{e}_x$ \\
+ions are stationery. $\vec{v}_i=0$.\\
+In $F^{\prime}$ use Lorentz transformation.
+$$
+\vec{v}_e^{\prime}=-\frac{v+u}{1+\frac{v u}{c^2}} \hat{e}_x \quad \quad \vec{v}_i^{\prime}=-v \hat{e}_x
+$$\\
+d)by conservation of charge.\\
+$$
+\begin{aligned}
+& \rho L=\rho^{\prime} L^{\prime} \\
+& \rho^{\prime}=\gamma \rho .
+\end{aligned}
+$$
+For positive ions. $\rho_{+}^{\prime}=\gamma \rho_{+}$
+For negative elections $\rho_{-}=\gamma \rho_{-}^{\prime} \Rightarrow \rho_{-}^{\prime}=\frac{\rho_{-}}{\gamma}$
+$$
+\begin{aligned}
+& \rho_{+}+\rho_{-}=0 \\
+& \rho_{+}^{\prime}+\rho^{\prime} \neq 0 .
+\end{aligned}
+$$
+$\Rightarrow B$ will observe a presence of charge.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{spho_book_TYS_images/2012_sol_Q6.jpg}
+	\caption{the coordinate system (left) charge density and length of the wire in the two frames (right)}
+\end{figure}
+\subsection{Question 7}
+7. When a perfect monatomic gas expands adiabatically (no heat interchange with its surroundings) the pressure and volume of the gas are related by the formula:
+$$
+P_{1} V_{1}^{\gamma}=P_{2} V_{2}^{\gamma}
+$$
+where $\gamma$ in this case is $5 / 3$ and $P_{1}, V_{1}, P_{2}, V_{2}$ refer to the initial and final states of the volume and pressure of the gas . A helium balloon at atmospheric pressure is allowed to rise rapidly to a height such that the external pressure is half atmospheric pressure. The envelope of the balloon is at all times loose, of negligible mass, and regarded as a perfect heat insulator. \\
+(i) Calculate the ratio of the initial to final volume of the balloon. \\
+(ii) If the initial temperature of the gas was $300 \mathrm{~K}$, what will be its new temperature? [5] \\
+i)
+$$
+\begin{aligned}
+& P_1 V_1^\gamma=P_2 V_2^\gamma \\
+& \frac{V_f}{V_i}=\left(\frac{P_i}{P_f}\right)^{\frac{1}{\nu}}=2^{\frac{3}{5}}=1.52
+\end{aligned}
+$$
+ii)
+$$
+\begin{aligned}
+& p V \propto T \\
+& T_f=\frac{P_f V f}{P_i V_i} T_i \\
+& =(1.5157)\left(\frac{1}{2}\right) \times 300 \\
+& =227 \mathrm{~K} \\
+&
+\end{aligned}
+$$
+\subsection{Question 8}
+8. It is well known in classical (nonrelativistic) electrodynamics that an electron traces out a circular orbit in a uniform magnetic field. But what if it is not all alone? Examine two electrons in a homogeneous magnetic feld moving in the plane perpendicular to the field lines. Under suitably chosen initial conditions the two electrons are found to move along the same circular orbit. Determine the radius of this circle. Are there further periodic solutions? What happens in the case of an electron and a positron? Can the two annihilate (i.e. encounter), and if so, under what initial conditions? [12]
+$$
+\operatorname{evB}-k \cdot \frac{e^2}{4 r^2}=m \frac{v^2}{r}
+$$
+$$
+\begin{aligned}
+& r^2-\frac{k e}{4 v B}-\frac{m v}{e B} r=0 . \\
+& r=\frac{\frac{m v}{e B} \pm \sqrt{\left(\frac{m v}{e B}\right)^2+\frac{k e}{v B}}}{2} \\
+& =\frac{m v}{2 e B}+\sqrt{\frac{m^2 v^2}{e^2 B^2}+\frac{k e}{v B}} \\
+&
+\end{aligned}
+$$
+$v$ is the velocity of the electrons in the circular orbit.\\
+
+There are journals online on the later parts of the question, but numerical solutions to coupled ODE are involved, I am not sure whether there are simpler methods.\\
+
+\subsection{Question 9}
+9. A cylindrical piece of steel, of diameter $0.4 \mathrm{~mm}$, is lowered very carefully on to water. Show that it may float horizontally with approximately half its volume above the free surface of the liquid. Assume that the angle of contact is $\pi$ radian. (Take the density of steel to be $8.5 \times 10^{3} \mathrm{~kg} \mathrm{~m}^{-3}$ and the surface tension of water to be $7.0 \times 10^{-2} \mathrm{~N} \mathrm{~m}^{-1}$. [8]
+
+\subsection{Question 10}
+10. In a Young's double slit experiment, the region between screen and slits is immersed in a liquid whose refractive index varies with time $t$ (in seconds) as $n_{\ell}=2.50 - 0.25 t$ until it reaches a steady state value $1.25$. The distance between the slits and the screen is $D=1.00 \mathrm{~m}$ and the distance between the slits $S_{1}$ and $S_{2}$ is $d=2.00 \times 10^{-3}$ m. A glass plate of thickness $t_{g}=3.60 \times 10^{-5} \mathrm{~m}$ and refractive index $n_{g}=1.50$ is introduced in front of one of the slits. Note that the illuminations at $S_{1}$ and $S_{2}$ are from coherent sources with zero phase difference.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2012q10.png}
+	\caption{Modified Young's Double Slit}
+\end{figure}
+
+(i) Consider the point $P$ on the screen at a distance $y$ from O $(S_{1} O=S_{2} O ; O P=y)$. Obtain the expression for the optical path difference $\Delta x$ in terms of the refractive indices. [3] \\
+(ii) If $P$ is the central maximum. Obtain the expression for $y$ as a function of time $t$. [3] \\
+(iii) Obtain the time $t_{m}$ when the central maximum is at a point $O$, equidistant from $S_{1}$ and $S_{2}$, i.e. $S_{1} O=S_{2} O$ [3] \\
+(iv) Determine the speed, $v$ of the central maximum when it is at $O$. [3]\\
+
+i)
+$$
+\Delta x=n_g \operatorname{t_g} \frac{D}{\sqrt{D^2+\left(\frac{d}{2}-y\right)^2}}+n_l \sqrt{(D-\operatorname{t_g})^2+\left(\frac{d}{2}-y\right)^2}-n_l  \sqrt{D^2+\left(\frac{d}{2}+y\right)^2}
+$$
+$$
+\begin{aligned}
+D & \gg d, D \gg y, D \gg \operatorname{t_g} \\
+\Delta x & \approx n_g t_g+n_l(D-t_g)\left[1+\frac{1}{2}\left(\frac{d / 2-y}{D-t_g}\right)^2\right]-n_l D\left[1+\frac{1}{2}\left(\frac{d / 2+y}{D}\right)^2\right] \\
+& \approx n_g t_g-n_l t_g-n_l \frac{d y}{D}
+\end{aligned}
+$$
+ii)\\
+If $P B$ the central maximum
+$$
+\begin{aligned}
+\Delta x & =0 \\
+y & =\frac{(n_g-n_l) \operatorname{t_g} D}{n_l d}=\frac{n_g}{n_l} \frac{\operatorname{t_g} D}{d}-\frac{\operatorname{t_g} D}{d} \\
+& =\frac{n_g}{2.50-0.25 t} \frac{\operatorname{t_g} D}{d}-\frac{\operatorname{t_g} D}{d}
+\end{aligned}
+$$
+iii)
+$$
+\begin{gathered}
+y=0 \\
+n_l=n_g \\
+2.50-0.25 t_m=1.50 \\
+t_m=4s
+\end{gathered}
+$$\\
+iv) \\
+$\frac{d y}{d t}=\frac{n_g \operatorname{t_g} D}{d}\frac{0.25}{(2.50-0.25 t)^2}$\\
+when $t_m=4s$\\
+$$
+\begin{aligned}
+v & =\frac{1.50 \times 3.60 \times 10^{-5}}{2 \times 10^{-3}} \frac{0.25}{1.50^2} . \\
+& =0.003 \mathrm{~ms}^{-1}
+\end{aligned}
+$$
+\end{document}

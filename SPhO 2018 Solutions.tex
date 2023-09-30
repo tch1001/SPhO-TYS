@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+
+\title{SPhO Ten Year Series (TYS) with Solutions: 2018 Solutions}
+\author{
+    Solutions available on Victoris\\
+    \texttt{victoris.org}
+    \and 
+    Solutions By Anonymous
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{2018 (1.5h for Q1-5, 1.5h for Q6-9)}
+\subsection{Question 1}
+1. A particle $\mathrm{X}$ is projected with speed $v$ in a direction which makes an angle of $30^{\circ}$ from the horizontal. When this particle reaches the highest point of its trajectory, another particle $\mathrm{Y}$ is dropped from the roof of a tall building. The two particles collide at the base of the building. The particle $\mathrm{Y}$ takes a time of $0.17 \mathrm{~s}$ to fall a $5.0 \mathrm{~m}$ tall window in the building. The base of the window is $50.0 \mathrm{~m}$ above the ground. Ignore the effect of air resistance, find \\
+i) the height of the building; [4] \\
+ii) the value of $v$; [4] \\
+iii) the distance of the point of projection of $X$ from the foot of the building. [2]
+
+\subsection{Solution 1}
+\subsubsection{Part 1i}
+\begin{align}
+    5 &= u(0.17) + \frac{1}{2}g(0.17)^2 \Rightarrow u=28.5779 \\
+    u^2 &= 0^2+2gh' \Rightarrow h' = 83.251 \\
+    h &= h' + 5 + 50 = 138.25 \mathrm{m}
+\end{align}
+
+\subsubsection{Part 1ii}
+\begin{align}
+    0^2 &= (v\sin\pi/6 )^2 - 2gh \Rightarrow v = 104.16 \mathrm{m/s}
+\end{align}
+
+\subsubsection{Part 1iii}
+\begin{align}
+    h &= \frac{1}{2} gt^2 \Rightarrow t = 5.309 \mathrm{s} \\
+    x &= v \cos\pi/6 \cdot t \\
+    d &= x\tan \pi/6 = 276.49 \mathrm{m}
+\end{align}
+\subsection{Question 2}
+2. A horizontal platform vibrates with simple harmonic motion in the horizontal direction with a period of $2.0 \mathrm{~s}$. A small object placed on the platform starts to slide when the amplitude of vibration reaches $0.4 \mathrm{~m}$. \\
+i) Calculate the coefficient of static friction between the object and the platform. [5] \\
+ii) The platform now excutes vertical simple harmonic motion with a period of $1.5 \mathrm{~s}$. What is the maximum amplitude of the motion if the object were to be in contact with the plate throughout the motion? [5]
+
+\subsection{Solution 2}
+\subsubsection{Part 2i}
+\begin{align}
+    |a_{\max}| &= \omega^2 A = \mu_s g \\
+    \mu_s &= 0.402
+\end{align}
+
+\subsubsection{Part 2ii}
+\begin{align}
+    |a_{\max}| &= \omega^2 A \leq g \\
+    A_{\max} &= 0.559 \mathrm{m}
+\end{align}
+
+
+\subsection{Question 3}
+3. Consider a gas with molecular mass $m$ in a constant gravitational field $\mathbf{g}$. \\
+i) Write down an equation relating a small change in pressure $\Delta P$ over a small change in height $\Delta z$. [1] \\
+ii) Show that if the temperature $T$ is constant, the pressure of a gas $P(z)$ in a uniform gravitational field decreases with height $z$ according to the expression [9]
+$$
+P(z)=P(0) \mathrm{e}^{-\frac{m g z}{k_{B} T}}
+$$
+
+\subsubsection{Part 3i}
+\begin{align}
+\Delta P &= -\rho g \Delta z = - \frac{Pmg}{kT} \Delta z
+\end{align}
+
+\subsubsection{Part 3ii}
+Taking $\Delta P, \Delta z \rightarrow 0$,
+\begin{align}
+    dP &= - \frac{Pmg}{kT} dz \\
+    \int_{P(0)}^{P(z)} \frac{dP}{P} &= \int_0^z -\frac{mg}{kT} dz \\
+    \ln \frac{P(z)}{P(0)} &= -\frac{mgz}{kT} \\
+    P(z) &= P(0) \mathrm{e}^{-\frac{m g z}{k_{B} T}}
+\end{align}
+\subsection{Question 4}
+4. A copper wire with mass $m$ is stretched between two fixed points at a distance $l$ apart. A tension $F_{T}$ is applied to the wire. When the copper wire is vibrating in the fundamental mode together with a $256 \mathrm{~Hz}$ tuning fork, a beat of frequency $5 \mathrm{~Hz}$ is observed. The copper wire is removed and a brass (which is an alloy made of copper and zinc) wire, with the same length and diameter, is stretched between the same two fixed points. The same tension is again applied to the brass wire. It is found that in this case, the brass wire, vibrating in the fundamental mode, resonates with the $256 \mathrm{~Hz}$ tuning fork when the two are vibrated together. [The mass densities of copper and zinc are $8940 \mathrm{~kg} \mathrm{~m}^{-3}$ and $7140 \mathrm{~kg} \mathrm{~m}^{-3}$ respectively.] \\
+i) State an equation for the speed of the wave on the string in terms of $m, l$ and $F_{T}$ only. [1] \\
+ii) Determine the percentage by mass of zinc in the brass wire. State any assumptions you make in your calculation. [9] 
+
+\subsubsection{Part 4i}
+\[v=\sqrt{\frac{T}{\mu}} = \sqrt{\frac{F_T l}{m}}\]
+
+\subsubsection{Part 4ii}
+Fundamental mode implies $\lambda = 2l \Rightarrow f=v/2l$.
+
+\[f = \frac{\sqrt{\frac{F_T l}{m}}}{2l} \propto m^{-1/2} \propto \rho^{-1/2}\]
+
+Since the copper wire has a higher density, it must have a lower fundamental frequency of 251 Hz. We have
+
+\[\sqrt{\frac{\rho_b}{\rho_c}} = \frac{251}{256} \Rightarrow \rho_b = 8594.2 \mathrm{kg/m^3}\]
+
+Suppose the percentage by mass of zinc is $x$. 
+\begin{align}
+    \frac{1}{\rho_b} &= \frac{1-x}{\rho_c} + \frac{x}{\rho_z} \\
+    x &= 31.9 \%
+\end{align}
+\subsection{Question 5}
+5. A $5.00 \mathrm{ml}$ solution was injected into the bloodstream of a patient. The solution contains radioactive iodine ${ }^{131} \mathrm{I}$ with a half-life of $8.025$ days at a concentration of $1.00 \times 10^{-10} \mathrm{~kg} \mathrm{~m}^{-3}$. The activity of a $5.00 \mathrm{ml}$ blood sample taken 24 hours later is found to be 3171 counts in 30 minutes. \\
+i) Calculate the decay constant for ${ }^{131} \mathrm{I}$. [1]\\
+ii) Calculate the total volume of blood in the patient's body given by these results. State any assumptions you make in your calculation. [9]
+
+\subsubsection{Part 5i}
+\[\lambda = \ln 2 / t_{1/2} = 0.0864 \mathrm{days^{-1}}\]
+
+\subsubsection{Part 5ii}
+\begin{align}
+    N &= N_0 \exp(-\lambda t) \\
+    3171 &= N_0 (\exp(-\lambda) - \exp(-\lambda(1+1/48)) \\
+    N_0 &= 1.9229 \times 10^6 \\
+    \frac{N_0}{5} &= \frac{5\times 10^{-6} \times N_A \times 1.00 \times 10^{-10} \times 10^3/ 131}{V} \\
+    V &= 5.94 \mathrm{L}
+\end{align}
+\subsection{Question 6}
+6. A singly ionised helium atom, with electron in its ground state (i.e. principal quantum number $n=1)$, is at rest at position $\mathrm{O}$. A neutron of kinetic energy of $68.2 \mathrm{eV}$ is moving from the left (along the $x$-axis) towards $\mathrm{O}$ and collides inelastically with the helium atom. The neutron is scattered at an angle of $90^{\circ}$ relative to its original direction of motion (i.e. towards the $y$-axis). The helium atom, after the collision, is energetically excited and moves at an angle to the $x$-axis as shown below.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2018q6.png}
+	\caption{}
+\end{figure}
+
+The mass of the helium atom is four times the mass of the neutron, and the energy levels of the helium atom are given by
+$$
+E_{n}=-\frac{54.4}{n^{2}} \mathrm{eV}
+$$
+i) Find the allowed values of the kinetic energies of the scattered neutron and helium atom after the collision. [8] \\
+ii) If the helium atom de-excites subsequently by emitting radiation, find the range of wavelengths of the emitted radiation. For this part, you may assume that the momentum of the emitted photon is negligible. [4] \\
+iii) When an atom emits a photon during a transition from the state with energy $E_{i}$ to the state with energy $E_{f}$, the energy of the photon is not exactly equal to the energy difference $E_{i}-E_{f}$. This is because the atom recoils, and part of the transition energy becomes the kinetic energy of recoil of the atom. Estimate the percentage of this energy difference that becomes the kinetic energy of the recoiling atom for the shortest wavelength case of the previous part. [2] \\
+iv) Estimate the change in speed of the helium atom due to this transition. [2]
+
+\subsection{Solution 6}
+\subsubsection{Part 6i}
+Let $E_0, E_1$ be the initial and final KE of the neutron. Let $E_h$ be the final KE of the helium atom.
+\begin{align}
+    E_0 - 54.4 &= E_1 + E_h - \frac{54.4}{n^{2}} \\ 
+    v_{hx} &= \frac{1}{4} v_{nx} \Rightarrow E_{hy} = \frac{1}{4} E_0 \\
+    v_{hx} &= \frac{1}{4} v_{ny} \Rightarrow E_{hy} = \frac{1}{4} E_1 \\
+    E_h &= \frac{1}{4}(E_0 + E_1) \\
+    E_1 &= \frac{3}{5} E_0 - \frac{4}{5}\cdot 54.4\left(1-\frac{1}{n^{2}}\right) \geq 0 \\
+    E_1 &= \frac{3}{5} E_0 - \frac{4}{5}\cdot 54.4\left(1-\frac{1}{n^{2}}\right), n \leq 4 \\
+    E_h &= \frac{2}{5} E_0 - \frac{1}{5}\cdot 54.4\left(1-\frac{1}{n^{2}}\right), n \leq 4
+\end{align}
+
+We have $E_1=40.29, 8.28, 2.24, 0.12 \mathrm{eV}$, $E_h = 27.28, 19.12, 17.61, 17.08 \mathrm{eV}$.
+
+\subsubsection{Part 6ii}
+Highest energy level neutron can reach is $n=4$. 
+\begin{align}
+    \frac{hc}{\lambda} &\leq 54.4\left(1-\frac{1}{4^{2}}\right) \\
+    \lambda & \geq 2.44\times10^{-8} \mathrm{m}
+\end{align}
+
+\subsubsection{Part 6iii}
+\begin{align}
+    p &= h/\lambda \\
+    E_K &= \frac{p^2}{2m} = \frac{h^2}{2m\lambda^2} \\
+    \mathrm{\% diff} &= \frac{E_K}{hc/\lambda} = \frac{h}{2m\lambda c} = 6.77\times 10^{-9}
+\end{align}
+
+\subsubsection{Part 6iv}
+\begin{align}
+    \Delta v &= \frac{p}{m} = \frac{h}{m\lambda} = 4.07 \mathrm{m/s}
+\end{align}
+\subsection{Question 7}
+7. A particle of mass $100 \mathrm{~g}$ is dropped from a height and falls vertically downward. The force due to air resistance is $-k v$, where $v$ is the speed of the particle and $k=1.09 \times 10^{-2} \mathrm{~kg} \mathrm{~s}^{-1}$ is a constant. \\
+i) What is the terminal velocity of the particle? [1] \\
+ii) How long does it take for the particle to achieve $99 \%$ of the terminal velocity? [4] \\
+iii) How far has the particle fallen when it achieves $99 \%$ of the terminal velocity? [4]
+
+\subsection{Solution 7}
+\subsubsection{Part 7i}
+\[v_T = \frac{mg}{k}\]
+\subsubsection{Part 7ii}
+\begin{align}
+    F &= mg-kv \\
+    \frac{dv}{dt} &= \frac{mg-kv}{m} \\
+    \int_0^{0.99 v_T} \frac{1}{mg-kv} dv &= \int_0^t \frac{1}{m} dt
+    t &= \frac{m}{k} \ln \frac{mg}{mg-k\cdot 0.99v_T} \\
+    &= \frac{m}{k} \ln 100 \\
+    &= 42.25
+\end{align}
+\subsubsection{Part 7iii}
+\begin{align}
+    v &= \frac{mg}{k} (1-\exp(-kt/m)) \\
+    x &= \frac{mg}{k^2} (m(\exp(-kt/m)-1) + kt) \\
+    &= \frac{m^2g}{k^2} (\ln 100 - 0.99) = 2985 \mathrm{m}
+\end{align}
+\subsection{Question 8}
+8. a) If a particle of charge $q$, mass $m$ and velocity $\mathbf{v}=v_{x} \hat{\mathbf{i}}+v_{y} \hat{\mathbf{j}}$ travels in a magnetic field $\mathbf{B}=B_{z} \hat{\mathbf{k}}$, then a Lorentz force $\mathbf{F}=F_{x} \hat{\mathbf{i}}+F_{y} \hat{\mathbf{j}}$ acts on the particle. As a result, the particle moves in a circular orbit. Assume that the particle is non-relativistic and that radiation is negligible. \\
+i) Derive an expression for $T$, the time taken for the charged particle to make one complete revolution in the orbit in terms of $m, q$ and $B_{z}$. [2] \\
+ii) Write down an expression for the acceleration of the particle $\mathbf{a}=a_{x}(t) \hat{\mathbf{i}}+a_{y}(t) \hat{\mathbf{j}}+a_{z}(t) \hat{\mathbf{k}}$ in terms of $v_{x}(t), v_{y}(t), v_{z}(t)$ and $T$. [3] \\
+b) To compute the trajectory of the particle, we can estimate and compute the velocity of the particle after a short time step $\Delta t$, we can use a forward difference method. We assume that, to first-order, the acceleration in the $x$ and $y$-directions are constant during this short period of time such that $v_{x}(t+\Delta t) \simeq v_{x}(t)+a_{x}(t) \Delta t$ [3] \\
+i) Write down the equations which determine $x(t+\Delta t)$ and $y(t+\Delta t)$ from $x(t)$ and $y(t)$ in terms of $T, B_{z}, q, m$ and $\Delta t$. [3] \\
+ii) Derive an equation for the change in kinetic energy $\Delta E_{k}$ after time $\Delta t$ in terms of $T, B_{z}, q$, $m$ and $\Delta t$. [3] \\
+iii) Calculate the ratio $E_{k_{f}} / E_{k_{i}}$ for $\Delta t=0.01 T$, where $E_{k_{i}}$ and $E_{k_{f}}$ are the kinetic energies at the start and end of an orbit respectively. [2]
+c) Another method to compute the trajectory is to use a central difference method. We still assume that the acceleration in the $x$ and $y$-directions are constant during this short period of time $\Delta t$, but for $t>2 \Delta t$, when calculating the Lorentz force, we have instead
+$$
+v_{x}(t) \simeq \frac{x(t+\Delta t)-x(t-\Delta t)}{2 \Delta t} \text { and } a_{x}(t) \simeq \frac{x(t+\Delta t)-2 x(t)+x(t-\Delta t)}{\Delta t^{2}}
+$$
+i) Obtain equations to calculate $x(t+\Delta t)$ from $x(t)$ and $x(t-\Delta t)$, as well as $y(t+\Delta t)$ from $y(t)$ and $y(t-\Delta t)$, in terms of $B_{z}, q, m$ and $\Delta t$. [6] \\
+ii) Derive an equation for the change in kinetic energy $\Delta E_{k}$ after time $\Delta t$ in terms of $B_{z}, q, m$ and $\Delta t$ via the central difference method. [4] \\
+d) On the same diagram, sketch (alongside the actual trajectory of the particle) the trajectories of the particle as computed using the forward the central difference methods. [2]
+
+\subsection{Solution 8}
+Incomplete
+\subsection{Question 9}
+9. A rocket of proper length $600 \mathrm{~m}$ is moving directly away from the earth with uniform velocity. A radar pulse is sent out from the earth and is reflected from the reflectors at the back end and the front end of the rocket. The first reflected radar pulse is received back at the base $5.0$ minutes after emission and the second reflected pulse is received $12.0 \mu \mathrm{s}$ later. \\
+i) Calculate the distance of the rocket from the earth at the instant the outgoing radar pulse hits the back end reflector. [2] \\
+ii) Calculate the velocity of the rocket relative to the earth. [5] \\
+iii) Calculate the time interval between the reflections at the back end and front end of the rocket measured in the inertial frame of the rocket. [3] \\
+iv) Explain why the time interval between the reflections in the two frames (i.e. the earth frame and the rocket frame) are not related by the time dilation formula. [3]
+
+\subsection{Solution 9}
+\subsubsection{Part 9i}
+$$
+d=2.5\mathrm{min} \times c = 4.50\times 10^10 \mathrm{m}
+$$
+\subsubsection{Part 9ii}
+Let the distance of the front end of the rocket from the earth at the instant the outgoing radar pulse hits the front end reflector be $d'$
+\begin{align}
+    d' - d &= c \Delta t \\
+    c\Delta t &= l' + v\Delta t \\
+    \frac{l}{\gamma_v} &= (c-v)\Delta t \\
+    \frac{l^2}{1-v^2/c^2} &= (c-v)^2(\Delta t)^2 \\
+    (1-\beta^3)(1+\beta) &= \frac{l^2}{c^2 (\Delta t)^2} \\
+    \beta &= 0.95441 \Rightarrow v = 2.86 \times 10^8 \mathrm{m/s}
+\end{align}
+
+\subsubsection{Part 9iii}
+Using the Lorentz transformations,
+\begin{align}
+    \Delta t' &= \gamma \left(\Delta t - \frac{vc\Delta t}{c^2} \right) \\
+    \Delta t' &= 9.16 \times 10^{-7} \mathrm{s}
+\end{align}
+
+\subsubsection{Part 9iv}
+The two events have different $x$ coordinates in the lab frame.
+\end{document}
+

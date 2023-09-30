@@ -1,0 +1,425 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+
+\title{SPhO Ten Year Series (TYS) with Solutions: 2010 Solutions}
+\author{
+    Solutions available on Victoris\\
+    \texttt{victoris.org}
+    \and 
+    Solutions by Tan Chien Hao\\
+    \texttt{www.tchlabs.net}
+    % new collaborators add your name and contact here!
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{2010}
+\subsection{Question 1}
+In 1899, Max Planck introduced the units $\hbar=\frac{h}{2\pi}$, $c$ and $G$, where $h$ is the Planck constant, $c$ is the speed of light in vacuo and $G$ is the Newton gravitational constant so that the force between two bodies of masses $m_1$ and $m_2$ placed a distance $r$ apart is given by 
+\[F=G\frac{m_1 m_2}{r_2}\]
+(i) In terms of these Planck units, write down the dimensions of mass, length and time. These quantities are called the Planck mass $M_{pl}$, the Planck length $l_{pl}$ and the Planck time $t_{pl}$. [9]\\
+(ii) Find the value of $M_{pl}$ in SI (i.e. metres-kilogramme-seconds, mks) units. [2] \\
+(iii) Find the ratio
+ \[\frac{E_{grav}}{m_e c^2}\] where $E_{grav}$ is the gravitational energy between two electrons separated by a distance equal to the Compton wavelength of an electron of mass $m_e$. [4] \\
+(iv) Consider a particle of mass $M_{pl}$. Find the ratio \[\frac{E_{grav}}{M_{pl} c^2}\] where $E_{grav}$  is the gravitational energy between two such particles separated by a distance equal to their own Compton wavelength. Thus, $M_{pl}$ can be interpreted as the mass scale that quantum gravitational effects become important. [2] \\
+
+[Note: The energy of a photon with the Compton wavelength of a particle is the same as the rest mass of the particle.] 
+\subsection{Solution 1}
+(i)
+\begin{align}
+	[\hbar] &= \text{kg m}^2 \text{s}^{-1} \\
+	[c] &= \text{m s}^{-1}\\
+	[G] &= \text{m}^3 \text{s}^{-2} \text{kg}^{-1}
+\end{align}
+To find $M_{pl}$, let it be $M_{pl}=\hbar^\alpha c^\beta G^\gamma$
+\begin{align}
+	[M_{pl}] &= \text{kg}^{\alpha-\gamma} \text{m}^{2\alpha+\beta+3\gamma} \text{s}^{-\alpha-\beta-2\gamma} \\
+	\alpha-\gamma &= 1\\
+	2\alpha+\beta+3\gamma &= 0\\
+	-\alpha-\beta-2\gamma &=0
+\end{align}
+Solving, 
+\[\alpha=\frac{1}{2}, \beta=\frac{1}{2}, \gamma=-\frac{1}{2}\]
+Hence, $M_{pl} = \sqrt{\frac{\hbar c}{G}}$\\
+Repeating the procedure for $l_{pl}$ and $t_{pl}$, we find
+\[l_pl = \sqrt{\frac{\hbar G}{c^3}}, \quad t_{pl} = \sqrt{\frac{\hbar G}{c^5}}\]
+(ii) Direct substitution of constants into $M_{pl} = \sqrt{\frac{\hbar c}{G}}$ gives us $M_{pl} = 2.18 \times 10^{-8} \text{ kg}$.\\
+(iii) The Compton wavelength is given by $\lambda_{comp} = \frac{h}{mc}$. So
+\begin{align} 
+	|E_{grav}| &= \frac{G m_e^2}{\left(\frac{h}{m_e c}\right) } = \frac{Gm_e^3 c}{h} \\
+	\left|  \frac{E_{grav}}{m_e c^2} \right| &= \frac{Gm_e^2}{ch} = 2.79 \times 10^{-46}
+\end{align}
+(iv)
+\begin{align} 
+	|E_{grav}| &= \frac{GM_{pl}^3 c}{h}\\
+	\left|  \frac{E_{grav}}{M_{pl} c^2} \right| &= \frac{GM_{pl}^2}{ch} = \frac{G}{ch} \frac{\hbar c}{G} = \frac{1}{2\pi} 
+\end{align}
+\subsection{Question 2}
+2. A block of mass $M$ rests on a fixed plane inclined at angle $\theta$. A horizontal force of $Mg$ is applied to the block, as shown in Fig. \ref{2010q2}. The coefficient of static friction between the block and the plane is $\mu$. \\
+(i) Assuming that the friction force between the block and the plane is large enough to keep the block at rest, determine the magnitude of the normal and friction forces (call them $N$ and $F_y$ ) that the plane exerts on the block in terms of $M$ and $\mu$\\
+(ii) determine the range of angles $\theta$ for which the block remain at rest on the plane in terms of $\mu$. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5 \linewidth]{spho_book_TYS_images/2010q2.png}
+\caption{Horizontal force on a block.} \label{2010q2}
+\end{figure}
+
+\subsection{Solution 2}
+\includegraphics[width=0.3\linewidth]{spho_book_TYS_images/2010q2_2.png} \\
+(i) I don't think it's possible to express $N, F_f$ purely in terms of $M,\mu$. It will depend on angle $\theta$ as well.
+Balancing forces parallel to the slope, \[M_{g} \cos \theta+{I}_{f}-m g \sin \theta=0\]
+Balancing forces perpendicular to the slope, \[N=M g(\sin \theta+\cos \theta)\]
+Lastly, the frictional force satisfies the inequality \[\left|F_{f}\right| \leq \mu N\]
+Now we just need to solve this to get \[F_{g}=-M_{g}(\sin \theta-\cos \theta)\]
+and \[N=M_{g}(\sin \theta+\cos \theta)\]
+
+(ii)
+\begin{equation}
+	\frac{F_{f}}{N}=\frac{\sin \theta-\cos \theta}{\sin \theta + \cos\theta}=\frac{\tan \theta-1}{\tan \theta+1}
+\end{equation}
+From the inequality on friction, 
+\[-\mu \leq \frac{\tan \theta-1}{\tan \theta+1} \leq \mu\]
+The left inequality gives
+\begin{equation}
+	\begin{aligned}
+		&-\mu \tan \theta-\mu \leq \tan \theta-1 . \\
+		& 1-\mu \leq \tan \theta(\mu+1) \\
+		& \frac{1-\mu}{1+\mu} \leq \operatorname{tan} \theta
+	\end{aligned}
+\end{equation}
+while the right one gives
+\begin{equation}
+	\begin{aligned}
+		&\tan \theta-1 \leq \mu \tan \theta+\mu . \\
+		&\tan \theta(1-\mu) \leq 1+\mu . \\
+		&\tan \leq \frac{1+\mu}{1-\mu}
+	\end{aligned}
+\end{equation}
+
+Hence,
+\begin{equation}
+	\frac{1-\mu}{1+\mu} \leq \tan \theta \leq \frac{1+\mu}{1-\mu}
+\end{equation}
+
+\subsection{Question 3}
+3. A mobile is formed by supporting four metal butterflies of equal mass $m$ from a string of length $L$. The points of support are evenly spaced a distance $\ell$ apart as shown in Figure \ref{2010q3}. The string forms an angle $\theta_{1}$ with the ceiling at each end point. The center section of string is horizontal. \\
+(i) Find the tension in each section of string in terms of $\theta_{1}, m$, and $g$. \\
+(ii) Find the angle $\theta_{2}$, in terms of $\theta_{1}$. \\
+(iii) Show that the distance $D$ between the end points of the string is
+$$
+D=\frac{L}{5}\left(a \cos \theta_{1}+b \cos \left[\tan ^{-1}\left(\frac{1}{2} \tan \theta_{1}\right)\right]+1\right)
+$$
+where $a$ and $b$ are constants to be determined. State the values of $a$ and $b$. [3] \\
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{spho_book_TYS_images/2010q3.png}
+\caption{A mobile is formed by supporting four metal butterflies of equal mass $m$.} \label{2010q3}
+\end{figure}
+
+\subsection{Solution 3}
+For the first mass (from the left),
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2010q3_2.png}
+	\caption{Force body diagram of first mass from the left}
+\end{figure}
+
+balancing horizontal and vertical forces,
+\[T_{1} \cos \theta_{1}=T_{2} \cos \theta_{2} \]
+\[T_{1} ma_{1}=T_{2} \sin\theta_{2}+mg\]
+For the second mass (from the left), balancing horizontal and vertical forces,
+
+\begin{align}
+	T_{2} \sin \theta_{2}=m g \\
+	T_{3}=T_{2} \text { cos } \theta_{2}
+\end{align}
+The 2nd and 3rd equation lets us express $T_1$ as 
+\begin{equation}
+	T_{1}=\frac{2 m{g}}{\sin \theta_{1}}
+\end{equation}
+Then $T_3$ can be expressed as
+\begin{align}
+	T_{3}=T_{2} \text { cos } \theta_{2}  = T_{1} \cos \theta_{1} \\
+	T_3 = \frac{2 m{g}}{\sin \theta_{1}} \cos \theta_{1}=\frac{2 m g}{\tan \theta_1}
+\end{align}
+Finally $T_2$ is given by
+\begin{equation}
+	\begin{array}{l}
+		T_{2} \sin \theta_{2}=m g \\
+		T_{2} \cos \theta_{2}=\frac{2 m g}{\tan \theta_{1}}=2 m g \cot \theta_{1} \\
+		\Rightarrow T_{2}=m g \sqrt{1+4 \cot ^{2} \theta_{1}}
+	\end{array}
+\end{equation}
+(ii)
+\begin{equation}
+	\begin{aligned}
+		&\sin \theta_{2}=\frac{m g}{T_{2}} \\
+		&\operatorname{sin}\theta_{2}=\frac{1}{\sqrt{1+4 \cot ^{2} \theta_{1}}} \\
+		&\theta_{2}=\tan ^{-1}\left(\frac{1}{2 \cos \theta_{1}}\right) \\
+		&\theta_{2}=\tan ^{-1}\left(\frac{1}{2} \tan \theta_{1}\right)
+	\end{aligned}
+\end{equation}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2010q3_3.png}
+	\caption{Force body diagram of second mass from the left}
+\end{figure}
+Since 
+\begin{equation}
+	l\cos \theta_{2} =l\left(\frac{2\cos\theta_{1}}{\sqrt{1+4\operatorname{cot}^{2} \theta_{1}}}\right)
+\end{equation}
+Hence
+\begin{equation}
+	\begin{aligned}
+		D &=2 l \cos \theta_{1}+2 l \cos \theta_{2}+l \\
+		&=\frac{L}{5}\left(2 \cos \theta_{1}+2 \cos \left(\tan ^{-1}\left(\frac{1}{2} \tan \theta_{1}\right)\right)+1\right) \\
+		& a=2, \quad b=2
+	\end{aligned}
+\end{equation}
+
+
+\subsection{Question 4}
+4. A $670 \mathrm{~kg}$ meteorite is composed of aluminum. At a distance far from the Earth, its temperature is $-15^{\circ} \mathrm{C}$ and it moves with a speed of $14.0 \mathrm{ kms}^{-1}$ relative to the Earth. As it crashes into the planet, the resulting additional internal energy is shared equally between the meteor and the planet. Assuming that all of the material of the meteor rises momentarily to the same final temperature, determine this temperature. You may also assume that the specific heat of liquid and of gaseous aluminum is 1170 $\mathrm{Jkg}^{-1} \mathrm{~K}^{-1}$, the latent heat of fusion and vaporization of aluminum are $3.97 \times 10^{5} \mathrm{~J}$ $\mathrm{kg}^{-1}$ and $1.14 \times 10^{7} \mathrm{~J} \mathrm{~kg}^{-1}$ respectvely, and the melting point and boiling point of aluminum are $660 \mathrm{~K}$ and $2450 \mathrm{~K}$ respectively.
+[10]
+
+\subsection{Solution 4}
+Because $M_E >> \text{Mass of asteroid}$, earth barely changes its velocity, so half (the internal energy is shared equally between the meteor and the planet) of the meteorites kinetic energy (KE) and gravitational potential energy (GPE) is converted to heat.
+\begin{equation}
+	\begin{aligned}
+		&E_{KE} + E_{GPE} \\
+		&=\frac{1}{2}(670)\left(14.0 \times 10^{3}\right)^{2} + \frac{(6.67\times 10^{-11}) (5.97219\times10^24) (670)}{6.371 \times 10^6} \\
+		&=1.075516 \times 10^{11} \mathrm{~J} \\
+		&E_{converted} \\
+		&=\frac{1}{2} (E_{KE} + E_{GPE}) \\
+		&=5.37757 \times 10^{10} \mathrm{~J}
+	\end{aligned}
+\end{equation}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{spho_book_TYS_images/2010q4.png}
+	\caption{Phase transitions, please ignore my working on the bottom left.}
+\end{figure}
+We don't know the heat capacity for solid aluminium, so I am just assuming we don't need to account for process (I). A quick google search tells us that it is $900 \mathrm{~J} / \mathrm{kg}^{\circ} \mathrm{C}$ which means $E_{I} = (660-258.15) \times 670 \times 900 = 2.4232 \times 10^{8} \mathrm{~J}$, which is small compared to $E_{II}+...+E_{IV}=9.3072 \times 10^9 \mathrm{~J}$ anyway. I would accept both answers personally since this question involves so much approximation anyway.
+\begin{equation}
+	\begin{aligned}
+		&E_{II}=3.97 \times 10^{5} \times 670=2.6599 \times 10^{8} \mathrm{~J} .\\
+		&E_{III}=(2450-660) \times 670 \times 1170 =1.403181 \times 10^{9} \mathrm{~J} .\\
+		&E_{IV}=1.14 \times 10^{7} \times 670=7.638 \times 10^{9} \mathrm{~J}\\
+		&E_{V}=5.37757 \times 10^{10}-E_{II}-E_{III}-E_{IV}\\
+		&=4.4469 \times 10^{10} \mathrm{~J}
+	\end{aligned}
+\end{equation}
+The remaining energy goes into heating the gas,
+\begin{equation}
+	\begin{aligned}
+		T - {2450}&=E_{V} / (670 \times 1170) =56727 \mathrm{~K} \\
+		T &= 59177 \mathrm{~K} \text {(so high :O??)}
+	\end{aligned}
+\end{equation}
+
+\subsection{Question 5}
+5. A pion at rest with a mass $m_{\pi}$ decays to a muon of mass $m_{\mu}$ and an antineutrino of negligible mass. The reaction is written as $\pi^{-} \rightarrow \mu^{-}+\bar{\nu}$. Calculate the kinetic energy of the muon and the energy of the antineutrino in electron volts. You may take $m_{\pi}=273 m_{e}$ and $m_{\mu}=207 m_{e}$ where $m_{e}$ is the rest mass of the electron.
+$[9]$
+\subsection{Solution 5}
+Before the collision,
+\begin{equation}
+	\begin{aligned}
+		E_{\pi}^{2} &=m_{\pi}^{2} \\
+		E_{\pi} &=m_{\pi} \\
+		E_{\mu}+E_{\nu} &=E_{\pi}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		&E_{\mu}^{2}-p_{\mu}^{2}=m_{\mu}{ }^{2}\\
+		&E_{V}^{2}-p_{\nu}^{2}=m_{\nu}^{2}\\
+		&p_{\mu}=-p_\nu\\
+		&E_{\mu}^{2}-E_{V}^{2}=m_{\mu}{ }^{2}-m_{\nu}{ }^{2}\\
+		&\left(E_{\mu}+E_{\nu}\right)\left(E_{\mu}-{E_\nu}\right)=m_{\mu}^{2}-m_{\nu}{ }^{2}\\
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		&E_{\mu}-E_{\nu}=\frac{m_{\mu}^{2}-m_{\nu}^2}{m_{\pi}} \\
+		&E_{\mu}+E_{\nu}=m_{\pi} \\
+		&E_{\mu}=\frac{1}{2}\left(m_{\pi}+\frac{m_{\mu}^{2}-m_{\nu}^2}{m_{\pi}}\right)= \frac{1}{2}\left(m_{\pi}+m_{\mu}^{2} / m_{\pi}\right) \\
+		&E_{V}=\frac{1}{2}\left(m_{\pi}-\frac{m_{1}^{2}-m_{\nu}^{2}}{m_{\pi}}\right)=\frac{1}{2}\left(m_{\pi}-m_{\mu}^{2} / m_{\pi}\right)
+\end{aligned}
+\end{equation}
+Putting units back to obtain numerical values,
+\begin{equation}
+	\begin{aligned}
+		&E_{\mu}=\frac{1}{2}\left(\frac{m_{\pi}^{2}+m_{\mu}^{2}}{m_{\pi}}\right) c^{2} \\
+		&E_{\nu}=\frac{1}{2}\left(\frac{m_{\pi}^{2}-m_{\mu}^{2}}{m_{\pi}}\right)c^{2}
+	\end{aligned}
+\end{equation}
+This gives us 
+\begin{align}
+	E_\mu &= 1.7590 \times 10^{-11} \text{ J}\\
+	E_\nu &= 4.7474 \times 10^{-11} \text{ J}
+\end{align}
+
+\subsection{Question 6}
+6. A smaller disk of radius $r$ and mass $m$ is attached rigidly to the face of a second larger disk of radius $R$ and mass $M$ as shown in Figure \ref{2010q6}. The center of the small disk is located at the edge of the large disk. The large disk is mounted at its center on a frictionless axle. The assembly is rotated through a small angle $\theta$ from its equilibrium position and released. \\
+(i) Show that the speed of the center of the small disk as it passes through the equilibrium position is
+$$
+v=\alpha\left[\frac{R g(1-\cos \theta)}{(M / m)+(r / R)^{2}+\beta}\right]^{1 / 2}
+$$
+where $\alpha$ and $\beta$ are constants to be determined. State the values of these constants. [7]\\
+(ii) Determine the period of the motion in terms of $M, m, R$ and $r$. [3]
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2010q6.png}
+	\caption{A smaller disk of radius $r$ and mass $m$ is attached rigidly to the face of a second larger disk of radius $R$ and mass $M$}\label{2010q6}
+\end{figure}
+
+\subsection{Solution 6}
+(i)
+\begin{equation}
+	\begin{aligned}
+		&\omega=\frac{v}{R}\\
+		&\frac{1}{2}I_{1} \omega^{2}+\frac{1}{2} m v^{2}+\frac{1}{2} I_{2} \omega^{2}=m g R(1-\cos \theta)\\
+		&\frac{1}{2} \frac{1}{2} M R^{2} \frac{v^{2}}{R^{2}}+\frac{1}{2} m v^{2}+\frac{1}{2} \frac{1}{2} \operatorname{mr}^{2} \frac{v^{2}}{R^{2}}=mgR(1-\cos \theta)\\
+		&v^{2}\left(\frac{1}{4} M+\frac{1}{2} m+\frac{1}{4} m \frac{r^{2}}{R^{2}}\right)=m g R(1-\cos \theta)\\
+		&v^{2}=\frac{g R(-1-\cos \theta)}{\frac{1}{4}\frac{M}{m}+\frac{1}{4}\left(\frac{r}{k}\right)^{2}+\frac{1}{2}}\\
+		&=4 \frac{g R(1-\cos \theta)}{\frac{M}{m}+\left(\frac{r}{R}\right)^{2}+2}\\
+		&V=2 \sqrt{\frac{{g r(1-\cos \theta)}}{\frac{M}{n}+\left(\frac{r}{R}\right)^{2}+2}}\\
+		&\alpha=2, \quad \beta=2
+	\end{aligned}
+\end{equation}
+(ii) 
+$\frac{1}{2} I_{1} \omega^{2}+\frac{1}{2} m^{2}+\frac{1}{2} I_{2} \omega^{2}+m g R(1-\cos \theta)=\text{const}$ \\
+$\dot{\theta}^{2}\left(-\frac{1}{4} m R^{2}+\frac{1}{2} m^{2}+\frac{1}{4} m r^{2}\right)=m g(\cos \theta-1)+\text{const}\approx m g R\left(-\frac{\theta^{2}}{2}\right)+$ const. \\
+Differentiating wrt $\theta$,
+$$
+\begin{aligned}
+	&2 \ddot{\theta} \alpha=\operatorname{mgR} \theta=\theta . \\
+	&\ddot{\theta}+\frac{m g R}{\frac{1}{2} m R^{2}+m R^{2}+\frac{1}{2} m r^{2}} \theta=0 .
+\end{aligned}
+$$
+$$
+\omega=\sqrt{\frac{2 m g R}{M R^{2}+2 {M R}^{2}+m r^{2}}}
+$$
+\begin{equation}
+	T=\frac{2 \pi}{\omega}=2 \pi \sqrt{\frac{M R^{2}+2 m R^{2}+m r^{2}}{2 m g}}
+\end{equation}
+\subsection{Question 7}
+7. An electric motor turns a flywheel through a drive belt that joins a pulley on the motor and a pulley that is rigidly attached to the flywheel, as shown in Figure \ref{2010q7}. The flywheel is a solid disk with a mass of $80.0 \mathrm{~kg}$ and a diameter of $1.25 \mathrm{~m}$. It turns on a frictionless axle. Its pulley has a much smaller mass and a radius of $0.230 \mathrm{~m}$. If the tension in the upper (taut) segment of the belt is $135 \mathrm{~N}$ and the flywheel has a clockwise angular acceleration of $1.67 \mathrm{rads}^{-2}$, find the tension in the lower (slack) segment of the belt.
+$[4]$
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2010q7.png}
+	\caption{An electric motor turns a flywheel through a drive belt that joins a pulley on}\label{2010q7}
+\end{figure}
+\subsection{Solution 7}
+$\begin{aligned}
+	&I{\alpha}=(\Delta T) r\\
+	&\Delta T=\frac{\frac{1}{2} m R^{2} \alpha}{r} \\
+	&=\frac{\frac{1}{2}(80)\left(\frac{1.25}{2}\right)^2 (1.67)}{0.230}\\
+	&=113.45\\
+	&\text {Bottom tension}=135-\Delta T\\
+	&=21.55 \mathrm{~N} 
+\end{aligned}$
+
+\subsection{Question 8}
+8. A plano-concave lens having index of refraction $1.50$ is placed on a flat glass plate, as shown in Figure \ref{2010q8}. Its curved surface, with radius of curvature $8.00 \mathrm{~m}$, is on the bottom. The lens is illuminated from above with yellow sodium light of wavelength $589 \mathrm{~nm}$, and a series of concentric bright and dark rings is observed by reflection. The interference pattern has a dark spot at the center, surrounded by 50 dark rings, of which the largest is at the outer edge of the lens. \\
+(i) What is the thickness of the air layer at the center of the interference pattern? \\
+(ii) Calculate the radius of the outermost dark ring. \\
+(iii) Find the focal length of the lens. [9]
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2010q8.png}
+	\caption{A plano-concave lens placed on a flat glass plate} \label{2010q8}
+\end{figure}
+\subsection{Solution 8}
+Remember that reflection has a $\pi$ phase shift. Neglect refraction effects. The optical path difference is responsible for interference.
+(i) 
+$$\begin{aligned}
+	&2 d=51 \lambda \\
+	&d=\frac{51}{2} \lambda=1.502 \times 10^{-5} \mathrm{~m} .
+\end{aligned}$$
+(ii) 
+$$
+\begin{aligned}
+	& \sqrt{8^{2}-(8-d)^{2}} \\
+	=& 0.0155 \mathrm{~m}\quad \text{(3sf)} \\
+	=& 1.55 \text{ cm} \\
+\end{aligned}
+$$
+(iii)
+$$\begin{aligned}
+	&\frac{1}{f}=(1.5-1)\left(\frac{1}{-8}\right) \\
+	&\frac{1}{1}=-0.0625 \\
+	&f=-16 \text{ m}
+\end{aligned}$$
+
+
+\subsection{Question 9}
+9. (a) A toroid has a major radius $R$ and a minor radius $r$ and it is tightly wound with $N$ turns of wire, as shown in Figure \ref{2010q9}. If $R>>r$, the magnetic field in the region enclosed by the wire of the torus, of cross-sectional area $A=\pi r^{2}$, is essentially the same as the magnetic field of a solenoid that has been bent into a large circle of radius $R$.\\
+\begin{figure}
+	\includegraphics[width=0.8\linewidth]{spho_book_TYS_images/2010q9.png}
+	\caption{A toroid has a major radius $R$ and a minor radius $r$ and it is tightly wound with $N$ turns of wire.} \label{2010q9}
+\end{figure}
+Show that the self-inductance of such a toroid is approximately
+$$
+L \approx \kappa \mu_{0} \frac{N^{\alpha} A}{R}
+$$
+where $\kappa$ and $\alpha$ are constants. State the values of $\kappa$ and $\alpha$.
+(b) The toroid in Figure \ref{2010q9} with $N$ turns of wire is now replaced by one with a rectangular cross section. Its inner and outer radii are $a$ and $b$, respectively. The cross-section is a rectangle of length $b-a$ and breadth $h$.
+(i) Show that the inductance of the toroid is
+$$
+L=\kappa^{\prime} \mu_{0} \frac{N^{\beta} h}{R} \ln \frac{b}{a}
+$$
+where $\kappa^{\prime}$ and $\beta$ are constants, stating the values of $\kappa^{\prime}$ and $\beta$ [4]. \\
+(ii) Compute the self-inductance of a 500-turn toroid for which $a=10.0 \mathrm{~cm}$, $b=12.0 \mathrm{~cm}$, and $h=1.00 \mathrm{~cm}$. In part (a), an approximate expression for the inductances of a toroid with $R>>r$ was derived. If the calculations in part (b) (ii) were done using this approximate expression for self-inductance, what is the percentage error in the result? \\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{spho_book_TYS_images/2010q9_2.png}
+	\caption{A toroid with a rectangular cross-section.} \label{2010q9_2}
+\end{figure}
+\subsection{Solution 9}
+(a) 
+$$N \Phi=L I .$$
+$$\overbrace{\frac{\mu N I}{2 \pi R}}^{B} A N=L I$$
+$$L=\frac{1}{2 \pi} \frac{\mu_{0}  N^{2} A}{R}$$
+$$\kappa=\frac{1}{2 \pi}, \quad \alpha=2$$
+(b) (i)
+$$2 \pi x B=\mu N I$$
+$$B=\mu N I / 2 \pi x$$
+$$\Phi=h \int_{a}^{b} B d x=\mu \frac{h N I}{2 \pi} \ln \frac{b}{a} .$$
+$$L=\frac{\Phi N}{I}=\mu \frac{h N^{2}}{2 \pi} \ln \frac{b}{a} .$$
+$$L=\frac{R}{2 \pi} \mu_{0} \frac{N^{2} h}{R} \ln \frac{b}{a}$$
+$$k^{\prime}=\frac{R}{2 \pi}$$
+$$\beta=2$$
+(ii) 
+\begin{align}
+	L_{\text{circular}} &= \frac{1}{2\pi} \mu_0 \frac{N^2 A}{R}\\
+	&=9.09 \times 10^{-5} \mathrm{H} \quad \text{(3 sf)}\\
+	L_{\text {exact }}&=\frac{1}{2 \pi} \mu_{0} \cdot N^{2} h\ln \frac{b}{a}\\
+	&=9.12 \times 10^{-5} \mathrm{H} \quad \text{(3 sf)}
+\end{align}
+\% error $= \frac{L_{exact}-L_{circular}}{L_{exact}} = 0.286\% \quad \text{(3sf)}$.
+
+\subsection{Question 10}
+10. An empty box of total mass $M$ with perfectly reflecting walls is at rest in the lab frame. Then electromagnetic standing waves are introduced along the $x$ direction, consisting of $N$ photons, each of frequency $\nu$ as shown in Fig. 8. Determine the rest mass of the system (box + photons) when the photons are present.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2010q10.png}
+	\caption{An empty box of total mass $M$ with perfectly reflecting walls is at rest in the lab frame.}
+\end{figure}
+\subsection{Solution 10}
+I don't know.
+
+\end{document}
